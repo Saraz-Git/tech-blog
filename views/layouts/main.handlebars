@@ -1,0 +1,39 @@
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Tech Blog</title>
+    {{!-- <link rel='stylesheet' href='/css/jass.css' />
+    <link rel='stylesheet' href='/css/style.css' /> --}}
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                {{#if loggedIn}}
+                <button id="logout">logout</button>
+                {{else}}
+                <a href="/login">login</a>  
+                <a href="/signup">Signup</a>
+                {{/if}}
+            </nav>
+           
+            <h1>
+                The Tech Blog
+            </h1>
+           
+        </header>
+        <main>
+            {{{body}}}
+        </main>
+    </div>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

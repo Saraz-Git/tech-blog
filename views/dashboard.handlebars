@@ -1,0 +1,10 @@
+{{#each posts as |post|}}
+  <a href="/dashboard/edit/{{post.id}}">
+    <div>
+      <div>{{post.title}}</div>
+      <div>{{format_date post.date_created}}</div>
+    </div>
+  </a>
+{{/each}}
+
+<a href="/dashboard/new">＋ New Post</a>
