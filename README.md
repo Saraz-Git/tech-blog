@@ -1,6 +1,6 @@
 # Tech Blog
 
-## Your Task
+## Description
 
 Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
 
@@ -60,6 +60,6 @@ The following animation demonstrates the application functionality:
 
 ## Review
 
-- The URL of the application.
+- The URL of the application: https://tech-blog-1udg.onrender.com
 
-- The URL of the GitHub repository,.
+- The URL of the GitHub repository: https://github.com/Saraz-Git/tech-blog
