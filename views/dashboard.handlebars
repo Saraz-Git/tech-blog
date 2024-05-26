@@ -1,10 +1,14 @@
 {{#each posts as |post|}}
   <a href="/dashboard/edit/{{post.id}}">
-    <div>
-      <div>{{post.title}}</div>
-      <div>{{format_date post.date_created}}</div>
+    <div class="card">
+      <div class="card-header">
+        <h3>{{post.title}}</h3>
+        <h6>{{format_date post.date_created}}</h6>
+      </div>
+
     </div>
   </a>
 {{/each}}
 
-<a href="/dashboard/new">＋ New Post</a>
+<div id="newPostBtn">
+  <a href="/dashboard/new">＋ New Post</a></div>
