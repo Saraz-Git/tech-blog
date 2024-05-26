@@ -1,15 +1,16 @@
-<div>
-  <h2>Edit Post</h2>
-  <form class="edit-post-form">
-    <div>
+<div class="card">
+  <div class="card-header"><h3>Edit Post</h3></div>
+
+  <form class="card-body edit-post-form">
+    <div class="form-group">
       <label for="title-edit-post">Title</label>
       <input id="title-edit-post" value="{{title}}" type="text" />
     </div>
-    <div>
+    <div class="form-group">
       <label for="content-edit-post">Content</label>
       <textarea id="content-edit-post">{{content}}</textarea>
     </div>
-    <div>
+    <div class="form-group">
       <button id="editbtn" data-id="{{id}}" type="submit">Edit</button>
       <button id="delbtn" data-id="{{id}}">Delete</button>
     </div>
