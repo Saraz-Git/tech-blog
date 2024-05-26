@@ -58,6 +58,6 @@ The following animation demonstrates the application functionality:
 
 ## Review
 
-- The URL of the application: https://tech-blog-1udg.onrender.com
+- The URL of the application: https://tech-blog-rffx.onrender.com/
 
 - The URL of the GitHub repository: https://github.com/Saraz-Git/tech-blog
