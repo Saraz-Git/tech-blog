@@ -140,6 +140,7 @@ nav a:hover {
 
 #newPostBtn{
     margin: auto;
+    margin-top: 40px;
     justify-content: center;
     width: 100px;
    padding: 10px;
