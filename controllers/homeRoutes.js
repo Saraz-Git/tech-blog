@@ -36,10 +36,9 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
-
       ],
     });
-
+    console.log(postData.green);
     const post = postData.get({ plain: true });
 
     res.render('post', {
