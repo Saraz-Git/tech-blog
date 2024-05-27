@@ -23,7 +23,7 @@ if (document.querySelector('.create-post-form')) {
     document.querySelector('.create-post-form').addEventListener('submit', createPostFormHandler)
 };
 
-
+//Edit Post EventListener Function
 const editPostFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
 
@@ -52,9 +52,9 @@ const editPostFormHandler = async (event) => {
 };
 
 
-
-
+//Delete Post EventListener Function
 const delButtonHandler = async (event) => {
+    event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
         const response = await fetch(`/api/posts/${id}`, { method: 'DELETE', });
@@ -64,6 +64,6 @@ const delButtonHandler = async (event) => {
 };
 
 if (document.querySelector('.edit-post-form')) {
-    document.querySelector('.edit-post-form').addEventListener('click', delButtonHandler);
-    // document.querySelector('.edit-post-form').addEventListener('submit', editPostFormHandler);
+    document.querySelector('#delbtn').addEventListener('click', delButtonHandler);
+    document.querySelector('#editbtn').addEventListener('click', editPostFormHandler);
 }
