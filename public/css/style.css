@@ -1,16 +1,16 @@
 :root {
     --primary: #3d5852;
     --secondary: #e3e4e3;
-    --tertiary: #5e877f;
-    --quatrinary: #6c6b67;
+    --tertiary: #483d32;
+    --quatrinary: #8E8d8d;
     --light: #dcebde;
-    --dark: #483d32;
+    --dark:#393028;
     --error: rgb(228, 46, 1);
     --border-radius: 0.3rem;
 }
 
 body {
-    font-family: Arial;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ a:visited {
 }
 
 header {
-    padding: 40px;
+    padding: 40px 60px;
     text-align: start;
     background: var(--dark);
     color: var(--light);
@@ -62,7 +62,6 @@ nav a:hover {
     
 }
 
-
 .btn-no-style {
     color: var(--light);
     padding: 0px 40px 40px 0px;
@@ -70,13 +69,12 @@ nav a:hover {
     border: none;
     cursor: pointer;
     text-decoration: none;
-    font-size: 100%;
-    
+    font-size: 100%;  
 }
 
 /* CARDS */
 .card {
-    margin: 30px 40px;
+    margin: 30px 60px;
     flex: 0 1 300px;
     border: 3px solid var(--dark);
     border-radius: 0px;
@@ -85,18 +83,20 @@ nav a:hover {
 }
 
 .card-header {
-   
-   height: 50px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     color: var(--secondary);
-    font-weight: bold;
+    font-weight: lighter;
     margin: 0;
     background-color: var(--dark);
     padding: 0 15px;
-    /* border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0; */
+}
+
+.card-header p{
+    color: var(--quatrinary);
 }
 
 .card-body {
