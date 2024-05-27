@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');///Commment?
+const { Post, User, Comment } = require('../models');///Commment?
 const { withAuth } = require('../utils/helpers');
 
 
@@ -35,7 +35,7 @@ router.get('/post/:id', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
-        },
+        }, { model: Comment, include: User }
       ],
     });
     console.log(postData.green);
@@ -60,8 +60,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
-    res.render('dashboard', { ...user, loggedIn: req.session.loggedIn });
+    const isDashboard = true;
+    res.render('dashboard', { ...user, isDashboard, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -69,7 +69,8 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 router.get('/dashboard/new', withAuth, async (req, res) => {
   try {
-    res.render('dashboard-new', { loggedIn: req.session.loggedIn });
+    const isDashboard = true;
+    res.render('dashboard-new', { isDashboard, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -80,14 +81,12 @@ router.get('/dashboard/edit/:id', withAuth, async (req, res) => {
     const postData = await Post.findByPk(req.params.id);
 
     const post = postData.get({ plain: true });
-
-    res.render('dashboard-edit', { ...post, loggedIn: req.session.loggedIn });
+    const isDashboard = true;
+    res.render('dashboard-edit', { ...post, isDashboard, loggedIn: req.session.loggedIn });
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
-
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route

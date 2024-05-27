@@ -20,11 +20,15 @@
             <a href="/signup">Signup</a>
           {{/if}}
         </nav>
-
-        <div>
-          <h1>The Tech Blog</h1>
-        </div>
-
+        {{#if isDashboard}}
+          <div>
+            <h1>My Dashboard</h1>
+          </div>
+        {{else}}
+          <div>
+            <h1>The Tech Blog</h1>
+          </div>
+        {{/if}}
       </header>
       <main>
         {{{body}}}
