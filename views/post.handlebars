@@ -7,9 +7,10 @@
   </div>
 </div>
 
-<div>{{comment.content}}</div>
 {{#each comments as |comment|}}
-  <div>{{content}}</div>
+  <div class="card"><div class="card-body"><p>{{content}}<br /><br />Commented
+        by
+        {{user.name}}</p></div></div>
 {{/each}}
 
 {{#if loggedIn}}
