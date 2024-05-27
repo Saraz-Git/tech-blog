@@ -8,13 +8,18 @@
 </div>
 
 {{#each comments as |comment|}}
-  <div class="card"><div class="card-body"><p>{{content}}<br /><br />Commented
-        by
-        {{user.name}}</p></div></div>
+  <div class="card">
+    <div class="card-body">
+      <p>{{content}}<br /><br />- Commented by
+        {{user.name}}
+        on
+        {{format_date date_created}}</p>
+    </div>
+  </div>
 {{/each}}
 
 {{#if loggedIn}}
-  <form class="card comment-form">
+  <form class="card comment-form" data-id="{{id}}">
     <div class="card-header"></div>
     <div class="card-body">
       <div class="form-group">
@@ -22,7 +27,7 @@
         <textarea id="content-comment" type="text">Enter comment here...</textarea>
       </div>
       <div class="form-group">
-        <button type="submit">Submit</button>
+        <button data-id="{{id}}" type="submit">Submit</button>
       </div></div>
   </form>
   <script src="/js/comment.js"></script>
